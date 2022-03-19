@@ -8,8 +8,46 @@ let point = 0;
 let question_quantity = '∞';
 let lastTime, ms;
 ms = 0;
-timer.innerHTML = "0:00";
-score.innerHTML = point + '/' + question_quantity;
+timer.textContent = "0:00";
+
+
+let numberList = [1,2,3,4,5,6,7,8,9];
+
+function permutate(numbers)
+{
+    let questions = [];
+
+    for (let i = 1; i < numbers.length + 1; i++)
+    {
+        for (let j = i; j < numbers.length + 1; j++)
+        {
+            questions.push([i,j]);
+        }
+    }
+    return questions;
+}
+
+function shuffle(list)
+{
+    let newList = [];
+    let n = list.length;
+    while (n)
+    {
+        i = Math.floor(Math.random() * list.length);
+        if (i in list)
+        {
+            newList.push(list[i]);
+            delete list[i];
+            n--;
+        }
+    }
+    return newList;
+}
+
+questionList = shuffle(permutate(numberList));
+
+score.textContent = point + '/' + questionList.length;
+
 
 function update(time)
 {
@@ -17,7 +55,7 @@ function update(time)
     {
         const delta = time - lastTime;
         ms += delta;
-        timer.innerHTML = millisToMinutesAndSeconds(ms);
+        timer.textContent = millisToMinutesAndSeconds(ms);
     }
 
     lastTime = time;
@@ -36,28 +74,19 @@ answer.addEventListener("keydown", function (e) {
     }
 });
 
-while (ture)
-{
-    startTime = new Date();
-    endTime = new Date();
-    timeDiff = endTime - startTime;
-
-}
-
-
 
 function checkAnswer()
 {
     if (answer.value == xy[0] * xy[1])
     {
-        feedback.innerHTML = "Correct!";
+        feedback.textContent = "Correct!";
         point += 1;
     }
     else 
     {
-        feedback.innerHTML = "Incorrect!";
+        feedback.textContent = "Incorrect!";
     }
-    score.innerHTML = point + '/' + question_quantity;
+    score.textContent = point + '/' + question_quantity;
     answer.value = NaN;
     xy = genQuestion();
 }
@@ -68,7 +97,7 @@ function genQuestion()
     let x = Math.floor(Math.random() * 9) + 1;
     let y = Math.floor(Math.random() * 9) + 1;
 
-    question.innerHTML = x + "*" + y;
+    question.textContent = x + "*" + y;
     return [x,y];
 }
 
