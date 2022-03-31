@@ -10,10 +10,10 @@
     <link href="style.css" rel="stylesheet">
   </head>
 
-  <body class="container-fluid vh-100 fs-1 text-center bg-dark text-white">
+  <body class="container vh-100 fs-1 text-center bg-dark text-white">
     <header class="row h-25 align-items-start justify-content-evenly">
       <div class="col">
-        <p id="time">0:00</p>
+        <p id="time"></p>
       </div>
       <div class="col">
         <p id="score"></p>
@@ -24,7 +24,7 @@
         <div class="m-auto row">
             <h1 id="question"></h1>
         </div>
-        <div class="row m-auto w-20 justify-content-center">
+        <div class="row m-auto w-50 justify-content-center">
               <input id="answer" autocomplete="off" required type="number" placeholder="" >
               <input type="submit"  onclick="checkAnswer();" hidden/>
               <p id="feedback">^Type Answer Above^</p>
