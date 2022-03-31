@@ -11,7 +11,7 @@ ms = 0;
 timer.textContent = "0:00";
 
 
-let numberList = [1,2,3,4,5,6,7,8,9];
+let numberList = [1,2];
 
 function permutate(numbers)
 {
@@ -97,7 +97,7 @@ function genQuestion()
     let x = Math.floor(Math.random() * 9) + 1;
     let y = Math.floor(Math.random() * 9) + 1;
 
-    question.textContent = x + "*" + y;
+    question.textContent = x + "×" + y;
     return [x,y];
 }
 
