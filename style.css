@@ -27,7 +27,7 @@ input
 
 /* 470 */
 
-@media only screen and (max-height: 470px) {
+@media only screen and (max-height: 500px) {
     /* For mobile phones: */
     footer 
     {
