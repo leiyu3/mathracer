@@ -12,6 +12,7 @@ input[type=number] {
 body
 {
     overflow: hidden;
+    position: relative;
 }
 
 #question
@@ -23,3 +24,13 @@ input
 {
     text-align:center;
 }
+
+/* 470 */
+
+@media only screen and (max-height: 470px) {
+    /* For mobile phones: */
+    footer 
+    {
+        visibility: hidden;
+    }
+  }

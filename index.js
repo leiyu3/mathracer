@@ -74,7 +74,7 @@ function checkAnswer()
     answer.value = NaN;
     if (questionList.length == 0)
     {
-        feedback.textContent = "Completed in " + millisToMinutesAndSeconds(ms) + "!";
+        feedback.textContent = "Completed " + point + '/' + question_quantity + " questions in " + millisToMinutesAndSeconds(ms) + "!";
         mode = 99;
         answer.disabled = true;
         return;
