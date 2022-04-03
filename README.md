@@ -1,5 +1,5 @@
 # Math Racer
-#### Video Demo: <>
+#### Video Demo: https://youtu.be/1Nu3nuLOxbg
 #### Description: 
 
 A web app developed to help grade schoolers practice the multiplication table.
@@ -8,7 +8,21 @@ A web app developed to help grade schoolers practice the multiplication table.
 # Features
 - Automatically generate questions from the multiplication table from 1 to 9 (45 questions in total)
 - At the end will give feed back on the time and number of questions answered correctly
+- An about module that gives short description of what the web app does.
 - Mobile Friendly
+
+# Description of Each Part of Project
+
+#### index.html
+This contain the html of the webpage. It contains the meta data to use Bootstrap, and sources the css and js file from its directory.
+
+#### style.css
+This contain the more specific styling that was not covered by Bootstrap. 
+
+#### index.js
+This file contains the game logic including timer, question generation, and answer checking.
+
+Also includes updating the webpage with the correct number of question answered, updating the timer, giving feedback at the end.
 
 # Why this was developed
 
