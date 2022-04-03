@@ -49,7 +49,8 @@ function update(time)
 
 answer.addEventListener("keydown", function (e) {
     //checks whether the pressed key is "Enter"
-    if (e.code === "Enter") {  
+    console.log("Message: " + e.key);
+    if (e.key === "Enter") {  
         checkAnswer();
         if (lastTime == null)
         {

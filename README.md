@@ -6,9 +6,12 @@ A web app developed to help grade schoolers practice the multiplication table
 - Automatically generate questions from the multiplication table from 1 to 9
 - Automaticaly time
 
+# Features to be added
+- A high score board
+
 # Features considering to be added
 - Mobile support
-- Different modes (1 Min Time Trial)
+- Different modes (1 Min Time Trial, standard mode)
 - Multiplayer race
 
 # Why this was developed
