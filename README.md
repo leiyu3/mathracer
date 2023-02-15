@@ -30,13 +30,16 @@ Multiplication is such an fundamental concept in mathematic that being able to m
 
 There are many math concept where an deep understanding of the multiplication table will help student solve questions faster and with less cognitive load.
 
-Among these concets are: Factoring, identifying and naming perfect squares, arithmetics, division, distribution.
+Among these concepts are: Factoring, identifying and naming perfect squares, arithmetics, division, distribution.
 
-The most common way to become faster and more accurate with multiplication is to memorize it through route learning. Since it is just way better to be able to know the multiplication table by heart instead of doing mental math everytime. The web app was developed to test how fast and how accurate one is able to go through the multiplication table.
+The most common way to become faster and more accurate with multiplication is to memorize it through route learning. Since it is just way better to be able to know the multiplication table by heart instead of doing mental math every time. The web app was developed to test how fast and how accurate one is able to go through the multiplication table.
 
-Lastly, this is also just a fun way for anyone to pratice and test how good they are with the multiplication table.
+Lastly, this is also just a fun way for anyone to practice and test how good they are with the multiplication table.
 
 ***Try to Get Sub 1 Minute!***
 
 # What Was Used to Develop This
 Developed using HTML, CSS, Bootstrap, and Javascript.
+
+
+Music: https://www.bensound.com
