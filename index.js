@@ -62,11 +62,13 @@ function checkAnswer()
 {
     if (answer.value == xy[0] * xy[1])
     {
+        feedback.style.color = "white";
         feedback.textContent = "Correct!";
         point += 1;
     }
     else 
     {
+        feedback.style.color = "red";
         feedback.textContent = "Incorrect!";
     }
     score.textContent = point + '/' + question_quantity;
