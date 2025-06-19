@@ -72,13 +72,13 @@ function checkAnswer()
         feedback.textContent = "Incorrect!";
     }
     score.textContent = point + '/' + question_quantity;
-    answer.value = NaN;
+    answer.value = "";
     if (questionList.length == 0)
     {
         feedback.textContent = "Completed " + point + '/' + question_quantity + " questions in " + millisToMinutesAndSeconds(ms) + "!";
         mode = 99;
         answer.disabled = true;
-        return;
+        return "";
     }
     xy = genQuestion();
 }
