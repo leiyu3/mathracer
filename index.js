@@ -8,19 +8,10 @@ function updateLayout() {
 
   if (isIOS()) {
     button.style.display = 'block'; // show on iOS
-    button.classList.add('w-25');
     input.classList.remove('w-100');
     input.classList.add('w-75');
   } else {
     button.style.display = 'none'; // hide on other devices
-
-    if (window.innerWidth > 768) {
-      input.classList.remove('w-75');
-      input.classList.add('w-100');
-    } else {
-      input.classList.remove('w-100');
-      input.classList.add('w-75');
-    }
   }
 }
 
