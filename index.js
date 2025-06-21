@@ -89,10 +89,6 @@ answer.addEventListener("keydown", function (e) {
     }
 });
 
-input.addEventListener("blur", function () {
-  setTimeout(() => input.focus(), 100); // Reopen numpad after blur
-});
-
 function checkAnswer()
 {
     if (answer.value == xy[0] * xy[1])
