@@ -72,6 +72,7 @@ answer.addEventListener("keydown", function (e) {
     e.preventDefault();
     console.log("Message: " + e.key);
     if (e.key === "Enter") {  
+        input.focus();
         checkAnswer();
         if (lastTime == null)
         {
