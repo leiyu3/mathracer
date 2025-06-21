@@ -4,7 +4,7 @@ function isIOS() {
 
 function updateLayout() {
   const input = document.getElementById('answer');
-  const button = document.querySelector('button[type="submit"]');
+  const button = document.querySelector('button[type="button"]');
 
   if (isIOS()) {
     button.style.display = 'block'; // show on iOS
