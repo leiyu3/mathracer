@@ -69,23 +69,13 @@ function update(time)
 
 answer.addEventListener("keydown", function (e) {
     //checks whether the pressed key is "Enter"
-    e.preventDefault();
     console.log("Message: " + e.key);
     if (e.key === "Enter") {  
-        input.focus();
         checkAnswer();
         if (lastTime == null)
         {
             window.requestAnimationFrame(update);
         }
-    } else if (/^[0-9]$/.test(e.key)) {
-        // Handle number input
-        console.log("Number entered: " + e.key);
-        // You can append it to the input manually if e.preventDefault() is used
-        answer.value += e.key;
-    } else if (e.key === "Backspace" || e.key === "Delete") {
-        console.log("Delete or Backspace pressed");
-        answer.value = answer.value.slice(0, -1);
     }
 });
 
