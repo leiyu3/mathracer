@@ -34,19 +34,3 @@ input
         visibility: hidden;
     }
   }
-
-
-.svg-btn {
-  width: 50px;      /* or any responsive value like 10% */
-  height: 50px;
-  padding: 0;
-  border: none;
-  background: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.svg-btn svg {
-  display: block;
-}

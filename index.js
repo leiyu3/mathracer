@@ -1,3 +1,32 @@
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+function updateLayout() {
+  const input = document.getElementById('answer');
+  const button = document.querySelector('button[type="submit"]');
+
+  if (isIOS()) {
+    button.style.display = 'block'; // show on iOS
+    input.classList.remove('w-100');
+    input.classList.add('w-75');
+  } else {
+    button.style.display = 'none'; // hide on other devices
+
+    if (window.innerWidth > 768) {
+      input.classList.remove('w-75');
+      input.classList.add('w-100');
+    } else {
+      input.classList.remove('w-100');
+      input.classList.add('w-75');
+    }
+  }
+}
+
+window.addEventListener('load', updateLayout);
+window.addEventListener('resize', updateLayout);
+
+
 // select elements from html
 let score = document.getElementById("score");
 let timer = document.getElementById("time");
@@ -48,6 +77,7 @@ function update(time)
 
 answer.addEventListener("keydown", function (e) {
     //checks whether the pressed key is "Enter"
+    e.preventDefault();
     console.log("Message: " + e.key);
     if (e.key === "Enter") {  
         checkAnswer();
@@ -55,6 +85,14 @@ answer.addEventListener("keydown", function (e) {
         {
             window.requestAnimationFrame(update);
         }
+    } else if (/^[0-9]$/.test(e.key)) {
+        // Handle number input
+        console.log("Number entered: " + e.key);
+        // You can append it to the input manually if e.preventDefault() is used
+        answer.value += e.key;
+    } else if (e.key === "Backspace" || e.key === "Delete") {
+        console.log("Delete or Backspace pressed");
+        answer.value = answer.value.slice(0, -1);
     }
 });
 
